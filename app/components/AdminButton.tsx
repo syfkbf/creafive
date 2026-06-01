@@ -1,9 +1,10 @@
-"use client";
-
 export default function AdminButton() {
   return (
-    <a href="/admin" className="admin-btn">
-      Admin Login
+    <a
+      href="/login"
+      className="admin-btn"
+    >
+      Login Admin
     </a>
   );
 }
