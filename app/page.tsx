@@ -1,8 +1,6 @@
-import AdminButton from "./components/AdminButton";
-
 export default function Home() {
   return (
-    <main
+    <div
       style={{
         margin: 0,
         minHeight: "100vh",
@@ -15,8 +13,7 @@ export default function Home() {
         color: "white",
       }}
     >
-      <AdminButton />
-
+      {/* MAIN CONTENT */}
       <div style={{ maxWidth: 700, padding: 40 }}>
         <img
           src="/logo-creafive.png"
@@ -70,10 +67,9 @@ export default function Home() {
         </h1>
 
         <p style={{ color: "rgba(255,255,255,.75)", lineHeight: 1.8 }}>
-          We're currently building a digital home for ideas, events, visual
-          experiences, presentations, and creative productions.
+          We're currently building a digital home for ideas, events, visual experiences, presentations, and creative productions.
         </p>
       </div>
-    </main>
+    </div>
   );
 }
