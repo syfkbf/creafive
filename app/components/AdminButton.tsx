@@ -1,10 +1,11 @@
+"use client";
+
+import Link from "next/link";
+
 export default function AdminButton() {
   return (
-    <a
-      href="/login"
-      className="admin-btn"
-    >
-      Login Admin
-    </a>
+    <Link href="/admin" className="admin-btn">
+      Admin
+    </Link>
   );
 }
