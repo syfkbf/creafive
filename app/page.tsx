@@ -1,65 +1,105 @@
-import Image from "next/image";
+import AdminButton from "./components/AdminButton";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <html lang="id">
+      <head>
+        <title>Creafive | Coming Soon</title>
+      </head>
+
+      <body style={{
+        margin: 0,
+        minHeight: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+        fontFamily: "'Segoe UI', sans-serif",
+        background: "linear-gradient(135deg,#0f172a 0%,#111827 40%,#1e3a8a 100%)",
+        color: "white",
+      }}>
+
+        {/* 🔐 ADMIN BUTTON */}
+        <AdminButton />
+
+        {/* MAIN CONTENT */}
+        <div style={{ maxWidth: 700, padding: 40 }}>
+
+          <img
+            src="/logo-creafive.png"
+            alt="Creafive"
+            style={{
+              display: "block",
+              margin: "0 auto",
+              width: "600px",
+              maxWidth: "80%",
+              height: "auto",
+              filter: "drop-shadow(0 0 25px rgba(255,255,255,.15))"
+            }}
+          />
+
+          <div style={{
+            fontSize: 14,
+            letterSpacing: 3,
+            textTransform: "uppercase",
+            color: "rgba(255,255,255,.7)",
+            marginBottom: 35
+          }}>
+            Creative • Event • Experience • Production
+          </div>
+
+          <div style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 10,
+            padding: "12px 22px",
+            borderRadius: 999,
+            border: "1px solid rgba(255,255,255,.15)",
+            background: "rgba(255,255,255,.08)"
+          }}>
+            <span style={{
+              width: 10,
+              height: 10,
+              borderRadius: "50%",
+              background: "#22c55e",
+            }} />
+            Website Under Construction
+          </div>
+
+          <h1 style={{ fontSize: 32, marginTop: 30 }}>
+            Something Creative Is Coming.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p style={{ color: "rgba(255,255,255,.75)", lineHeight: 1.8 }}>
+            We're currently building a digital home for ideas,
+            events, visual experiences, presentations, and creative productions.
           </p>
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+        {/* STYLE */}
+        <style>{`
+          .admin-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 16px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            transition: 0.2s;
+          }
+
+          .admin-btn:hover {
+            background: rgba(255,255,255,0.2);
+          }
+        `}</style>
+
+      </body>
+    </html>
   );
 }
